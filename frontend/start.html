@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Drowsiness Detector</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/icon" />
+  <link rel="icon" href="favicon.ico" type="image/icon" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="src/css/style.css">
+  <link rel="stylesheet" href="src/css/style2.css" />
+  <meta name="description" content="This is a web app for detecting drowsiness while a driver is driving">
+	<meta property="og:title" content="Drowsiness Detector" />
+	<meta property="og:description" content="This is a web app for detecting drowsiness while a driver is driving" />
+	<meta property="og:image" content="favicon.ico" />
+</head>
+
+<body onload="main()">
+  <div id="full-page-loader">
+    <div class="lds-ellipsis">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  <div id="warnings">
+    <div id="warning-text">
+      <p>This webapp needs camera to run.</p>
+      <p>The alarm sound is for waking you up so it quite loud.</p>
+      <button id="warning-button">OK I understand!</button>
+    </div>
+  </div>
+
+  <div class="wrapper d-flex align-items-stretch" id="wrapper">
+    <nav id="sidebar" class="active">
+      <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+          <i class="fa fa-bars"></i>
+          <span class="sr-only">Toggle Menu</span>
+        </button>
+      </div>
+      <div class="p-4">
+        <h1><a href="index.html" class="logo">Index</a></h1>
+        <ul class="list-unstyled components mb-5">
+          <li class="active">
+            <a href="index.html"><span class="fa fa-home mr-3"></span> Home</a>
+          </li>
+          <li>
+            <a href="#"><span class="fa fa-user mr-3"></span> People</a>
+          </li>
+          <li>
+            <a href="https://github.com/Yash-Handa" target="_blank" style="border-bottom: none"><img
+                src="src/assets/YashHanda.jpeg" alt="Yash Handa" class="float-left pep"> Yash Handa</a>
+          </li>
+          <li>
+            <a href="https://github.com/rohit-kapoor" target="_blank" style="border-bottom: none"><img
+                src="src/assets/RohitKapoor.png" alt="Rohit Kapoor" class="float-left pep"> Rohit Kapoor</a>
+          </li>
+          <li>
+            <a href="https://github.com/rahulgoyal981" target="_blank" style="border-bottom: none"><img
+                src="src/assets/YashHanda.jpeg" alt="Rahul Goyal" class="float-left pep"> Rahul Goyal</a>
+          </li>
+          <li>
+            <a href="https://github.com/saurav2005" target="_blank" style="border-bottom: none"><img
+                src="src/assets/SauravAggarwal.jpeg" alt="Saurav Aggarwal" class="float-left pep"> Saurav Aggarwal</a>
+          </li>
+        </ul>
+
+        <div class="footer">
+          <p>Made as Minor project for 4th year. Submitted to <a href="http://www.msit.in/" target="_blank"
+              style="color:yellow">MSIT</a></p>
+        </div>
+
+      </div>
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content" class="p-4 p-md-5 pt-5">
+      <h2 class="mb-4"><span>💥</span> Drowsiness Detector<span>💥</span></h2>
+
+      <div id="canvas-container">
+        <canvas id="canvas" class="canvas">Your browser doesn't support canvas</canvas>
+      </div>
+      <div id="padder"></div>
+    </div>
+  </div>
+
+  <!--     Add script files -->
+  <script src="src/js/jquery.min.js"></script>
+  <script src="src/js/popper.js"></script>
+  <script src="src/js/bootstrap.min.js"></script>
+  <script src="src/js/jeelizFaceTransfer.js"></script>
+  <script src="src/js/audio.js"></script>
+  <script src="src/js/main.js"></script>
+</body>
+
+</html>
